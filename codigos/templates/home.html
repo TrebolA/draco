@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
-<form method="post">{% csrf_token %}
-  <label for="your_name">Your name: </label>
-  <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-  <input type="submit" value="OK">
-   {{ form.as_p }}
-   <button type="submit">Enviar</button>
-</form>
+<div class="row">
+  <div class="col-sm-6">
+    <img src="{% static 'img/carta 1.png' %}" alt="poster" id="poster">
+  </div>
+  <div class="col-sm-6">
+    <form method="post" class="font-weight-bold">{% csrf_token %}
+      <div class="form-group col-10" id="nombreGroup">
+        <label for="nombre" style="color: black;">NOMBRE</label>
+        <input id="nombre" type="text" name="nombre" class="form-control form-control-sm rounded-0 bg-dark text-white" value="{{ nombre }}">
+      </div>
+      <div class="form-group col-10 inputGroup">
+        <label for="apellido" style="color: black;">APELLIDO</label>
+        <input id="apellido" type="text" name="apellido" class="form-control form-control-sm rounded-0 bg-dark text-white" value="{{ apellido }}">
+      </div>
+      <div class="form-group col-10 inputGroup">
+        <label for="correo" style="color: black;">CORREO</label>
+        <input id="correo" type="email" name="correo" class="form-control form-control-sm rounded-0 bg-dark text-white" value="{{ correo }}">
+      </div>
+      <div class="form-group col-10 inputGroup">
+        <label for="celular" style="color: black;">CELULAR</label>
+        <input id="celular" type="email" name="celular" class="form-control form-control-sm rounded-0 bg-dark text-white  " value="{{ celular }}">
+      </div>
+      <div class="form-group col-10 inputGroup">
+        <div class="form-check form-check-inline">
+          <input id="terminos" type="checkbox" name="terminos" class="rounded-0 bg-dark text-white form-check-input" value="{{ celular }}">
+          <label for="terminos" class="form-check-label" style="color: black;">He leido y acepto los terminos y condiciones</label>
+        </div>
+      </div>
+      <div class="form-group col-10 inputGroup">
+        <div class="form-check form-check-inline">
+          <input id="politica" type="checkbox" name="politica" class="rounded-0 bg-dark text-white form-check-input" value="{{ politica }}">
+          <label for="politica" class="form-check-label" style="color: black;">He leido y acepto las politicas de uso y privacidad</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark rounded-0 btn-sm mb-5">Enviar</button>
+    </form>
+  </div>
+</div>
 {% endblock %}

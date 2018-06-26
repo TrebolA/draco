@@ -1,9 +1,107 @@
 body {
   background: url('../img/Fondo draco.png');
-  background-size: 100%;
+  background-size: 100% 752%;
+  overflow-x: hidden;
 }
 
 form {
   background: url('../img/carta 2_1.png');
   display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 14%;
+}
+
+label {
+  font-family: Arial;
+}
+
+#nombreGroup {
+  margin-left: 2.5em;
+  margin-top: 12.5em;
+}
+
+.inputGroup {
+  margin-left: 2.5em;
+}
+
+button {
+  margin-left: 5em !important;
+}
+
+#fixedR {
+  position: absolute;
+  left: 91% !important;
+}
+
+#poster {
+  position: absolute;
+  left: 19%;
+  width: 105%;
+  transform: rotate(-30deg);
+}
+
+#tintero {
+  position: absolute;
+  top: 47000%;
+  left: -15%;
+  width: 400%;
+  transform: rotate(-15deg);
+}
+
+.imgRS {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: 100% 110%;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  form {
+    display: grid;
+    background-size: 100% 100%;
+    position: inherit;
+    left: 0%;
+  }
+
+  #nombreGroup {
+    margin-left: 1.3em;
+    margin-top: 10em;
+  }
+
+  .inputGroup {
+    margin-left: 1.3em;
+  }
+
+  button {
+    margin-left: 2.5em !important;
+    width: 40%;
+  }
+
+  label{
+    font-size: 50%;
+  }
+
+  .imgRS {
+    width: 6%;
+  }
+
+  #fixedR {
+    left: -5% !important;
+    top: 0;
+  }
+
+  #poster {
+    position: relative;
+    left: -1.5em;
+    width: 120%;
+  }
+
+  #tintero {
+    display: none;
+  }
 }

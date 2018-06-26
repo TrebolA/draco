@@ -25,7 +25,9 @@ SECRET_KEY = 'jut4ahf7%*!7$w^7a^1m27ki@1ifw#z!1!l$*f@t2273c%qqnm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'http://draco2-dev.us-west-2.elasticbeanstalk.com/',
+]
 
 
 # Application definition

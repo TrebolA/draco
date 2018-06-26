@@ -19,7 +19,7 @@ def home(request):
             inscrito = form.save(commit=False)
             listCodigos = []
             numAlea = random.randrange(1000)
-            f = open('codigos.txt')
+            f = open('/opt/python/current/app/codigos/codigos.txt')
             linea = f.readline()
             while linea != "":
                 listCodigos.append(linea)
@@ -37,7 +37,7 @@ def home(request):
             msg.attach_alternative(html_content, "text/html")
             msg.send()
 
-            f1 = open("codigos.txt", 'w')
+            f1 = open("/opt/python/current/app/codigos/codigos.txt", 'w')
             for x in listCodigos:
                 f1.write(x)
             f1.close()

@@ -19,7 +19,7 @@ def home(request):
             inscrito = form.save(commit=False)
             listCodigos = []
             numAlea = random.randrange(1000)
-            f = open('/home/brageanth/Programacion/Paramo/draco/codigos/templates/CODIGOS INCUBUS.txt')
+            f = open('codigos.txt')
             linea = f.readline()
             while linea != "":
                 listCodigos.append(linea)
@@ -37,7 +37,7 @@ def home(request):
             msg.attach_alternative(html_content, "text/html")
             msg.send()
 
-            f1 = open("/home/brageanth/Programacion/Paramo/draco/codigos/templates/CODIGOS INCUBUS.txt", 'w')
+            f1 = open("codigos.txt", 'w')
             for x in listCodigos:
                 f1.write(x)
             f1.close()

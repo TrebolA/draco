@@ -2,8 +2,15 @@ from django import forms
 from .models import Codigo
 
 
-class PostForm(forms.ModelForm):
+class CodigoForm(forms.ModelForm):
 
     class Meta:
-        model = Post
-        fields = ('title', 'text',)
+        model = Codigo
+        fields = (
+            'nombre',
+            'apellido',
+            'celular',
+            'correo',
+            'terminos',
+            'politica'
+            )

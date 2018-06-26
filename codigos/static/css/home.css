@@ -1,0 +1,9 @@
+body {
+  background: url('../img/Fondo draco.png');
+  background-size: 100%;
+}
+
+form {
+  background: url('../img/carta 2_1.png');
+  display: inline-block;
+}

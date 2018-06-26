@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
     'codigos',
 ]
 
@@ -124,3 +125,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# EMAIL SETTINGS
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = "25"
+EMAIL_HOST_USER = "info@paramopresenta.com"
+EMAIL_HOST_PASSWORD = "bajofondo2004"
+EMAIL_USE_TLS = True

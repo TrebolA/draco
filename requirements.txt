@@ -1,6 +1,7 @@
+boto3==1.5.26
 Django<=2.0.3
 django-import-export==1.0.1
+django-storages==1.6.5
 Pillow==4.3.0
 psycopg2>=2.7.3.2
-boto3==1.5.26
 wsgiref==0.1.2

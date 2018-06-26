@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
+    'storages',
     'codigos',
 ]
 
@@ -147,3 +148,21 @@ EMAIL_PORT = "25"
 EMAIL_HOST_USER = "info@paramopresenta.com"
 EMAIL_HOST_PASSWORD = "bajofondo2004"
 EMAIL_USE_TLS = True
+
+AWS_STORAGE_BUCKET_NAME = 'dracobucket'
+AWS_S3_REGION_NAME = 'us-west-2'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAI5KFI6CY4R6CA25A'
+AWS_SECRET_ACCESS_KEY = 'Agj6PYR6jzzLPCqIGMrTdfMvXvzMzwXMvBKhj5x9'
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
+# you run `collectstatic`).
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'

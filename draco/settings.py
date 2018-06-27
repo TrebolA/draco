@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'draco2-dev.us-west-2.elasticbeanstalk.com',
+    'www.losagradoylomaldito.com',
     'localhost',
 ]
 

@@ -1,16 +1,13 @@
 body {
   background: url('../img/Fondo draco.png');
-  background-size: 100% 752%;
-  overflow-x: hidden;
+  background-size: 100% 100%;
 }
 
 form {
   background: url('../img/carta 2_1.png');
-  display: inline-block;
   background-size: 100%;
   background-repeat: no-repeat;
-  position: absolute;
-  left: 14%;
+  padding-bottom: 6em;
 }
 
 label {
@@ -19,7 +16,7 @@ label {
 
 #nombreGroup {
   margin-left: 2.5em;
-  margin-top: 12.5em;
+  padding-top: 16em;
 }
 
 .inputGroup {
@@ -30,24 +27,12 @@ button {
   margin-left: 5em !important;
 }
 
-#fixedR {
-  position: absolute;
-  left: 91% !important;
-}
-
 #poster {
-  position: absolute;
-  left: 19%;
-  width: 105%;
-  transform: rotate(-30deg);
+  width: 122%;
 }
 
 #tintero {
-  position: absolute;
-  top: 47000%;
-  left: -15%;
   width: 400%;
-  transform: rotate(-15deg);
 }
 
 .imgRS {
@@ -56,21 +41,19 @@ button {
 
 @media only screen and (max-width: 768px) {
   body {
-    background-size: 100% 110%;
-    background-position: center;
+    background-size: 110% 110%;
+    background-position: center center;
     background-attachment: fixed;
   }
 
   form {
-    display: grid;
     background-size: 100% 100%;
-    position: inherit;
-    left: 0%;
+    padding-bottom: 0em;
   }
 
   #nombreGroup {
+    padding-top: 10em;
     margin-left: 1.3em;
-    margin-top: 10em;
   }
 
   .inputGroup {
@@ -90,15 +73,8 @@ button {
     width: 6%;
   }
 
-  #fixedR {
-    left: -5% !important;
-    top: 0;
-  }
-
   #poster {
-    position: relative;
-    left: -1.5em;
-    width: 120%;
+    width: 100%;
   }
 
   #tintero {
